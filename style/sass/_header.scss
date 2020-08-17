@@ -1,9 +1,7 @@
 @import "mixins-variaveis";
 
 .header {
-    position: relative;
     width: 100%;
-    @include flex;
     .menu-logo{
         width: 50%;
         min-height: 64px;
@@ -16,50 +14,39 @@
         font-family: $font-title;
         text-decoration: none;
         text-transform: uppercase;
-    }
-    label{
-        width: 32px;
-        min-height: 42px;
-        margin-right: 20px;
-        float: right;
-        @include spaceVertical;
-        div{
-            width: 100%;
-            height: 4px;
-            background-color: $secundary-color0;
-        }
+        display: block;
+        float: left;
+
     }
     .nav{
-        position: absolute;
-        top: 64px;
-        left: 0;
-        width: 100%;
+        clear: left;
         ul{
-            width: 100%;
+            margin: 0;
+            padding: 0;
             background-color: $secundary-color0;
             li{
+                list-style: none;
                 width: 100%;
-                height: 64px;
                 text-align: center;
-                &:last-child{
-                    border-bottom: none;
-                }
+                border-bottom: 2px dotted rgb(82, 82, 82);
                 a{
                     display: block;
                     width: 100%;
-                    line-height: 64px;
                     text-decoration: none;
                     text-transform: uppercase;
                     font-family: $font-text;
                     color: $primary-color1;
                     font-weight: 600;
-                    border-bottom: 2px solid rgb(82, 82, 82);
-                    
+                    padding: 25px 0;
+                    transition: .5s ease;
+                    &:hover{
+                        color: $primary-color0;
+                    }
                 }
             }
         }
         //temporário
-        display: none;
+        // display: none;
     }
     .btnMenu{
         display: none;
