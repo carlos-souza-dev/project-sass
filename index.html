@@ -4,7 +4,7 @@
         <title> Infusion </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">  
-        <meta name="author" content="Daniel">
+        <meta name="author" content="Carlos Souza">
         <meta name="description" content="descrição bacanuda">
         <meta name="keywords" content="html5, tecnologia">
 
@@ -12,18 +12,24 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="style/normalize.css">
-        <link rel="stylesheet" href="style/main.css">
+        <!-- Style -->
+        <link rel="stylesheet" href="style/css/normalize.css">
+        <link rel="stylesheet" href="style/css/main.css">
   
     </head>
-    <body>
+    <body class="no-js">
         
-        <header>
-          <a href="index.html">INFUSION</a>
+        <header class="header">
+          <a class="menu-logo" href="index.html">Infusion</a>
+          <label for="button">
+            <div class="hamburger1"></div>
+            <div class="hamburger2"></div>
+            <div class="hamburger3"></div>
+          </labe>
+          <button id="button" class="btnMenu">Menu</button>
           
-          <button>Menu</button>
           
-          <nav>
+          <nav class="nav">
             <ul>
               <li><a href="#">design folio</a></li>
               <li><a href="#">services</a></li>
@@ -35,12 +41,12 @@
           </nav>
         </header>
         
-        <section>            
+        <section class="first-section">         
           <h1>
-            CUTTING EDGE WP BUSINESS THEME
+            Cutting Edge Wp Business Theme
           </h1>
           <p>Gutful of bottlo no dramas he's got a massive hooroo.</p>
-          <a href="#">BUY IT NOW</a>                      
+          <a class="btn-buy" href="#">Buy it now</a>                      
         </section>
 
         
@@ -48,6 +54,42 @@
           <article>               
 
             <img src="img/c01.jpg" alt="Carousel Img">
+            
+            <div>
+              <img src="img/teamsprite_01.png" alt="Carousel Img">
+            </div>
+            <div>
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+          </article>  
+          <article>               
+
+            <img src="img/c02.jpg" alt="Carousel Img">
+            
+            <div>
+              <img src="img/teamsprite_01.png" alt="Carousel Img">
+            </div>
+            <div>
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+          </article>  
+          <article>               
+
+            <img src="img/c03.jpg" alt="Carousel Img">
+            
+            <div>
+              <img src="img/teamsprite_01.png" alt="Carousel Img">
+            </div>
+            <div>
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+          </article>  
+          <article>               
+
+            <img src="img/c04.jpg" alt="Carousel Img">
             
             <div>
               <img src="img/teamsprite_01.png" alt="Carousel Img">
@@ -96,12 +138,12 @@
           </div>
         </section>
 
-        <div>            
-          <div>
-            <figure><img alt="" src="img/slider/slide-01.png" /></figure>
-            <figure><img alt="" src="img/slider/slide-02.png" /></figure>
-            <figure><img alt="" src="img/slider/slide-01.png" /></figure>
-            <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+        <div class="slider">            
+          <div class="coursel">
+            <figure class="figure"><img alt="" src="img/slider/slide-01.png" /></figure>
+            <figure class="figure"><img alt="" src="img/slider/slide-02.png" /></figure>
+            <figure class="figure"><img alt="" src="img/slider/slide-01.png" /></figure>
+            <figure class="figure"><img alt="" src="img/slider/slide-02.png" /></figure>
             <span class="prev"><i class="fas fa-angle-left fa-4x"></i></span>
             <span class="next"><i class="fas fa-angle-right fa-4x"></i></span>
           </div>                    

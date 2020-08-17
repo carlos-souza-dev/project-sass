@@ -1,0 +1,65 @@
+@import "mixins-variaveis";
+
+.first-section{
+    width: 100%;
+    height: calc(100vh - 64px);
+    background-image: url('/img/01.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1{
+        width: 92%;
+        padding: 35px;
+        margin: 0;
+        text-transform: uppercase;
+        background-color: $primary-color1;
+        color: $text-colorw;
+        margin-bottom: 1vh;
+    }
+    p{
+        width: 75%;
+        padding: 24px;
+        background-color: $secundary-color0;
+        color: $text-colorw;
+        font-size: 1.3rem;
+        margin-bottom: 3vh;
+    }
+    .btn-buy{
+        display: block;
+        width: 50%;
+        text-align: center;
+        height: 72px;
+        line-height: 72px;
+        background-color: rgba($color: ($secundary-color0), $alpha: .4);
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $text-colorw;
+        font-family: $font-title;
+        font-weight: 600;
+        border: 1px solid white;
+        &:hover{
+        background-color: rgba($color: ($secundary-color0), $alpha: .7)
+        }
+    }
+}
+
+
+// <section class="first-section">
+//     <img src="/img/01.jpg" alt="background-image">            
+//     <h1>
+//     Cutting Edge Wp Business Theme
+//     </h1>
+//     <p>Gutful of bottlo no dramas he's got a massive hooroo.</p>
+//     <a  href="#">Buy it now</a>                      
+// </section>

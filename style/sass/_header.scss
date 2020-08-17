@@ -1,0 +1,90 @@
+@import "mixins-variaveis";
+
+.header {
+    position: relative;
+    width: 100%;
+    @include flex;
+    .menu-logo{
+        width: 50%;
+        min-height: 64px;
+        line-height: min(64px);
+        text-align: center;
+        background-color: $primary-color0;
+        color: $text-colorw;
+        font-weight: 700;
+        font-size: 1.5rem;
+        font-family: $font-title;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    label{
+        width: 32px;
+        min-height: 42px;
+        margin-right: 20px;
+        float: right;
+        @include spaceVertical;
+        div{
+            width: 100%;
+            height: 4px;
+            background-color: $secundary-color0;
+        }
+    }
+    .nav{
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        ul{
+            width: 100%;
+            background-color: $secundary-color0;
+            li{
+                width: 100%;
+                height: 64px;
+                text-align: center;
+                &:last-child{
+                    border-bottom: none;
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    line-height: 64px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: $font-text;
+                    color: $primary-color1;
+                    font-weight: 600;
+                    border-bottom: 2px solid rgb(82, 82, 82);
+                    
+                }
+            }
+        }
+        //temporário
+        display: none;
+    }
+    .btnMenu{
+        display: none;
+    }
+
+}
+
+
+// <header class="header">
+//     <a class="menu-logo" href="index.html">INFUSION</a> 
+//     <label for="button">
+//         <div class="hamburger1"></div>
+//         <div class="hamburger2"></div>
+//         <div class="hamburger3"></div>
+//     </labe>
+//     <button id="button" class="btnMenu">Menu</button>
+
+//     <nav class="nav">
+//         <ul>
+//             <li><a href="#">design folio</a></li>
+//             <li><a href="#">services</a></li>
+//             <li><a href="#">our business</a></li>
+//             <li><a href="#">how we help</a></li>
+//             <li><a href="#">take the tour</a></li>
+//             <li><a href="#">contact</a></li>
+//         </ul>
+//     </nav>
+// </header>
