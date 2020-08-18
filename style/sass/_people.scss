@@ -1,0 +1,69 @@
+@import "_mixins-variables";
+
+/* ============ PEOPLE CARDS ========================= */
+
+.container{
+    margin: 1rem;
+    
+    .people-section{
+        width: 100%;
+        margin-top: 2.5rem;
+        
+        .people-cards{
+
+            .people-about{
+                text-align: center;
+                padding: 64px 25px 20px;
+                border-left: 2px solid $border-color;
+    
+                .title{
+                    color: $title-color;
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                }
+                
+                .text{
+                    color: $text-color;
+                    font-size: .9rem;
+    
+                }
+            }
+
+            .image{
+                width: 100%;
+            }
+    
+            .avatar{
+                margin: -55px auto;
+                width: 88px;
+                height: 88px;
+                overflow: hidden;
+            }
+
+            &:hover{
+                outline: 5px solid $primary-color0;
+                outline-offset: -5px;
+
+                .avatar img{
+                    transform: translateY(-88px);
+                }
+                .title, .text{
+                    color: $primary-color0;
+                }
+            }
+        }        
+    }
+}
+
+// <article class="people-cards">               
+
+//     <img class="avatar" src="img/c01.jpg" alt="Carousel Img">
+    
+//     <div class="people-background">
+//     <img src="img/teamsprite_01.png" alt="Carousel Img">
+//     </div>
+//     <div class="people-about">
+//     <h2 class="title">Lorem ipsum dolor sit amet consectetur</h2>
+//     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+//     </div>
+// </article> 

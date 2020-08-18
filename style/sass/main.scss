@@ -11,10 +11,13 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    line-height: 1.6;
 }
 
 @import "_header.scss";
-@import "_first-section";
+@import "_first.scss";
+@import "_people.scss";
+@import "_content.scss";
 
 
 @import "_slider.scss";

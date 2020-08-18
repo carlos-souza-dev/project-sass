@@ -12,8 +12,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  line-height: 1.6;
 }
 
+/* ============ HEADER ========================= */
 .header {
   position: relative;
   width: 100%;
@@ -26,7 +28,7 @@ body {
   min-height: 64px;
   line-height: min(64px);
   text-align: center;
-  background-color: #e74141;
+  background-color: #19b69c;
   color: #ececec;
   font-weight: 700;
   font-size: 1.5rem;
@@ -74,7 +76,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-family: Open, sans-serif;
-  color: #ca5656;
+  color: #60b1a3;
   font-weight: 600;
   border-bottom: 2px solid #525252;
 }
@@ -82,48 +84,37 @@ body {
   display: none;
 }
 
+/* ============ FIRST SECTION ========================= */
 .first-section {
   width: 100%;
   height: calc(100vh - 64px);
-  background-image: url("/img/01.jpg");
-  background-repeat: no-repeat;
+  padding: 0 10px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.first-section img {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 64px);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(45deg, white 50%, transparent 50%) left calc(50% + 20px) bottom no-repeat, linear-gradient(-45deg, white 50%, transparent 50%) left calc(50% - 20px) bottom no-repeat, url("/img/01.jpg");
+  background-size: 40px 40px, 40px 40px, cover;
 }
 .first-section h1 {
-  width: 92%;
-  padding: 35px;
+  padding: 35px 20px;
   margin: 0;
   text-transform: uppercase;
-  background-color: #ca5656;
+  background-color: #60b1a3;
   color: #ececec;
-  margin-bottom: 1vh;
 }
 .first-section p {
-  width: 75%;
   padding: 24px;
   background-color: #2e2e2e;
   color: #ececec;
   font-size: 1.3rem;
-  margin-bottom: 3vh;
+  margin: 1vh 3vh 4vh;
 }
 .first-section .btn-buy {
   display: block;
-  width: 50%;
-  text-align: center;
-  height: 72px;
-  line-height: 72px;
+  padding: 20px 25px;
+  border-radius: 5px;
   background-color: rgba(46, 46, 46, 0.4);
   text-decoration: none;
   font-size: 1.5rem;
@@ -131,11 +122,56 @@ body {
   font-family: Sintony, sans-serif;
   font-weight: 600;
   border: 1px solid white;
+  transition: .5s ease;
 }
 .first-section .btn-buy:hover {
+  color: #60b1a3;
   background-color: rgba(46, 46, 46, 0.7);
 }
 
+/* ============ PEOPLE CARDS ========================= */
+.container {
+  margin: 1rem;
+}
+.container .people-section {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.container .people-section .people-cards .people-about {
+  text-align: center;
+  padding: 64px 25px 20px;
+  border-left: 2px solid #dbe1e7;
+}
+.container .people-section .people-cards .people-about .title {
+  color: #737c85;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.container .people-section .people-cards .people-about .text {
+  color: #929da5;
+  font-size: .9rem;
+}
+.container .people-section .people-cards .image {
+  width: 100%;
+}
+.container .people-section .people-cards .avatar {
+  margin: -55px auto;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+}
+.container .people-section .people-cards:hover {
+  outline: 5px solid #19b69c;
+  outline-offset: -5px;
+}
+.container .people-section .people-cards:hover .avatar img {
+  transform: translateY(-88px);
+}
+.container .people-section .people-cards:hover .title, .container .people-section .people-cards:hover .text {
+  color: #19b69c;
+}
+
+/* ============ PEOPLE CARDS ========================= */
 .slider {
   width: 100%;
 }
