@@ -1,0 +1,31 @@
+/* ============ COURSEL ========================= */
+
+
+.slider{
+    background-color: $secundary-color1 - 40;
+    padding: 125px 0 100px;
+    width: 100%;
+    overflow: auto;
+    .coursel{
+        white-space: nowrap;
+        figure{
+            margin: 0 15px;
+            display: inline-block;
+        }
+        img{
+            width: 100%;
+        }
+
+    }
+}
+
+// <div class="slider">
+//   <div class="coursel">
+//     <figure class="figure"><img alt="" src="img/slider/slide-01.png" /></figure>
+//     <figure class="figure"><img alt="" src="img/slider/slide-02.png" /></figure>
+//     <figure class="figure"><img alt="" src="img/slider/slide-01.png" /></figure>
+//     <figure class="figure"><img alt="" src="img/slider/slide-02.png" /></figure>
+//     <span class="prev" style="display: none"><i class="fas fa-angle-left fa-4x"></i></span>
+//     <span class="next" style="display: none"><i class="fas fa-angle-right fa-4x"></i></span>
+//   </div>
+// </div>

@@ -1,59 +1,55 @@
-@import "_mixins-variables";
 
 /* ============ PEOPLE CARDS ========================= */
 
-.container{
-    margin: 1rem;
+.people-section{
+    width: 100%;
+    margin-top: 2.5rem;
     
-    .people-section{
-        width: 100%;
-        margin-top: 2.5rem;
+    .people-cards{
         
-        .people-cards{
+        .people-about{
+            text-align: center;
+            padding: 64px 25px 20px;
+            border-left: 2px solid $border-color;
 
-            .people-about{
-                text-align: center;
-                padding: 64px 25px 20px;
-                border-left: 2px solid $border-color;
-    
-                .title{
-                    color: $title-color;
-                    font-size: 1.5rem;
-                    font-weight: normal;
-                }
-                
-                .text{
-                    color: $text-color;
-                    font-size: .9rem;
-    
-                }
+            .title{
+                color: $title-color;
+                font-size: 1.5rem;
+                font-weight: normal;
             }
+            
+            .text{
+                color: $text-color;
+                font-size: .9rem;
 
-            .image{
-                width: 100%;
             }
-    
-            .avatar{
-                margin: -55px auto;
-                width: 88px;
-                height: 88px;
-                overflow: hidden;
-            }
+        }
 
-            &:hover{
-                outline: 5px solid $primary-color0;
-                outline-offset: -5px;
+        .image{
+            width: 100%;
+        }
 
-                .avatar img{
-                    transform: translateY(-88px);
-                }
-                .title, .text{
-                    color: $primary-color0;
-                }
+        .avatar{
+            margin: -55px auto;
+            width: 88px;
+            height: 88px;
+            overflow: hidden;
+        }
+
+        &:hover{
+            outline: 5px solid $primary-color0;
+            outline-offset: -5px;
+
+            .avatar img{
+                transform: translateY(-88px);
             }
-        }        
-    }
+            .title, .text{
+                color: $primary-color0;
+            }
+        }
+    }        
 }
+
 
 // <article class="people-cards">               
 

@@ -7,8 +7,9 @@ $text-color: #929da5;
 $border-color: #dbe1e7;
 $primary-color1: rgb(96, 177, 163);
 $primary-color0: rgb(25, 182, 156);
-$secundary-color1: rgb(12, 46, 39);
-$secundary-color0: rgb(46, 46, 46);
+$secundary-color1: #455357;
+$secundary-color0: #242a2c;
+$background-color: #f8f9f9;
 
 @mixin flex{
     display: flex;

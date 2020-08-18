@@ -1,0 +1,53 @@
+/* ============ LAST ========================= */
+
+.last-section{
+    .title{
+        background-color: $primary-color0;
+        padding: 5px 0;
+        
+        h2{
+            font-size: 1.5rem;
+            color: $text-colorw;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    .thumbs{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: auto;
+        grid-gap: 0;
+
+        a {
+            img{
+                display: block;
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+// <section class="last-section">
+//     <div class="title">
+//         <div class="container">
+//           <h2>Latest Articles</h2> 
+//         </div>
+//     </div>
+
+//     <div class="thumbs">
+//         <a href="#"><img src="img/articles/01.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/02.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/03.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/04.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/05.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/06.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/07.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/08.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/09.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/10.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/11.jpg" alt=""></a>
+//         <a href="#"><img src="img/articles/12.jpg" alt=""></a>
+//     </div>
+// </section>

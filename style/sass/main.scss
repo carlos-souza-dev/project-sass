@@ -1,7 +1,10 @@
+@import "_mixins-variables";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 html{
     font-size: 16px;
@@ -10,14 +13,19 @@ html{
 body{
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: $font-text;
     line-height: 1.6;
+}
+
+.container{
+    margin: 0 1rem;
 }
 
 @import "_header.scss";
 @import "_first.scss";
 @import "_people.scss";
 @import "_content.scss";
-
-
-@import "_slider.scss";
+@import "_last.scss";
+@import "_coursel.scss";
+@import "_quotation.scss";
+@import "_footer.scss";
