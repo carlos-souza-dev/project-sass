@@ -1,21 +1,21 @@
 /* ============ COURSEL ========================= */
 
-
 .slider{
-    background-color: $secundary-color1 - 40;
+    background-color: darken($color: $secundary-color1, $amount: 15%);
     padding: 125px 0 100px;
     width: 100%;
     overflow: auto;
     .coursel{
         white-space: nowrap;
+        
         figure{
             margin: 0 15px;
             display: inline-block;
         }
+
         img{
             width: 100%;
         }
-
     }
 }
 

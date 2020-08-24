@@ -28,10 +28,20 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header .menu-logo {
+.header .header-top {
+  z-index: 1;
+  width: 100%;
+  height: 84px;
+  background-color: #ffff;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-top .menu-logo {
+  display: block;
   width: 50%;
-  min-height: 64px;
-  line-height: min(64px);
+  max-width: 300px;
+  min-height: 84px;
+  line-height: min(84px);
   text-align: center;
   background-color: #19b69c;
   color: #ececec;
@@ -41,49 +51,112 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.header label {
-  width: 32px;
+.header .header-top label {
+  width: 42px;
   min-height: 42px;
   margin-right: 20px;
   float: right;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  transform: rotate(0deg);
+  transition: all 1s ease-in-out;
 }
-.header label div {
+.header .header-top label .hamburger-close {
+  position: relative;
   width: 100%;
   height: 4px;
   background-color: #242a2c;
+  transition: all .8s ease-in-out;
+  transform: rotate(0deg);
+}
+.header .header-top label .hamburger-close::before {
+  width: 100%;
+  height: 4px;
+  content: '';
+  position: absolute;
+  top: -12px;
+  background-color: #242a2c;
+  transform: rotate(0deg);
+  transition: all .5s ease-in-out;
+}
+.header .header-top label .hamburger-close::after {
+  width: 80%;
+  height: 4px;
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  background-color: #242a2c;
+  transform: rotate(0deg);
+  transition: all .5s ease-in-out;
+}
+.header .header-top label .hamburger-open {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: all .5s ease-in-out;
+  transform: rotate(180deg);
+}
+.header .header-top label .hamburger-open::before {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  content: '';
+  top: 0px;
+  background-color: #242a2c;
+  transform: rotate(-45deg);
+  transition: all .5s ease-in-out;
+}
+.header .header-top label .hamburger-open::after {
+  width: 100%;
+  height: 4px;
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #242a2c;
+  transform: rotate(45deg);
+  transition: all .5s ease-in-out;
+}
+.header .header-top label.label-rotate {
+  transform: rotate(180deg);
+  transition: all 1s ease-in-out;
 }
 .header .nav {
-  position: absolute;
-  top: 64px;
-  left: 0;
   width: 100%;
-  display: none;
+  position: absolute;
+  top: 84px;
+  left: 0;
+  transition: all .5s ease-in-out;
 }
 .header .nav ul {
-  width: 100%;
-  background-color: #242a2c;
+  transition: all .2s ease-in-out;
 }
 .header .nav ul li {
-  width: 100%;
-  height: 64px;
   text-align: center;
 }
 .header .nav ul li:last-child {
   border-bottom: none;
 }
 .header .nav ul li a {
-  display: block;
   width: 100%;
-  line-height: 64px;
+  height: 74px;
+  line-height: 74px;
+  padding: 0 10px;
   text-decoration: none;
   text-transform: uppercase;
   font-family: Open, sans-serif;
   color: #60b1a3;
   font-weight: 600;
+  display: inline-block;
+  background-color: #242a2c;
   border-bottom: 2px solid #525252;
+}
+.header .nav.hide-menu {
+  transform: translateY(-100%);
+  transition: all .5s ease-in-out;
 }
 .header .btnMenu {
   display: none;
@@ -92,9 +165,10 @@ body {
 /* ============ FIRST SECTION ========================= */
 .first-section {
   width: 100%;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 84px);
   padding: 0 10px;
   text-align: center;
+  margin-top: 442px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,6 +206,10 @@ body {
 .first-section .btn-buy:hover {
   color: #60b1a3;
   background-color: rgba(36, 42, 44, 0.7);
+}
+
+.no-js .first-section.section-close {
+  margin-top: 0;
 }
 
 /* ============ PEOPLE CARDS ========================= */
@@ -232,7 +310,7 @@ body {
 
 /* ============ COURSEL ========================= */
 .slider {
-  background-color: #1d2b2f;
+  background-color: #232a2c;
   padding: 125px 0 100px;
   width: 100%;
   overflow: auto;

@@ -1,31 +1,12 @@
-@import "_mixins-variables";
+@import "mixins-variables";
+@import "resets";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-html{
-    font-size: 16px;
-}
 
-body{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: $font-text;
-    line-height: 1.6;
-}
-
-.container{
-    margin: 0 1rem;
-}
-
-@import "_header.scss";
-@import "_first.scss";
-@import "_people.scss";
-@import "_content.scss";
-@import "_last.scss";
-@import "_coursel.scss";
-@import "_quotation.scss";
-@import "_footer.scss";
+@import "header";
+@import "first";
+@import "people";
+@import "content";
+@import "last";
+@import "coursel";
+@import "quotation";
+@import "footer";
