@@ -1,0 +1,46 @@
+$font-title: Sintony, sans-serif;
+$font-text: Open, sans-serif;
+$font-paragraph: Sans, sans-serif;
+$text-colorw:rgb(236, 236, 236);
+$title-color: #737c85;
+$text-color: #929da5;
+$border-color: #dbe1e7;
+$primary-color1: rgb(96, 177, 163);
+$primary-color0: rgb(25, 182, 156);
+$secundary-color1: #455357;
+$secundary-color0: #242a2c;
+$background-color: #f8f9f9;
+
+@mixin flex ($just,$aline) {
+    display: flex;
+    justify-content: #{$just};
+    align-items: #{$aline};
+}
+
+@mixin textCenter {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin spaceVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+$desktop: 1024px;
+$mobile: 768px;
+
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media screen and (min-width: #{$mobile}) {
+        @content;
+    }
+}

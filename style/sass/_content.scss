@@ -1,0 +1,59 @@
+
+/* ============ CONTENT ========================= */
+
+.content{
+    background-color: $background-color;
+    padding: 20px 0 80px;
+    border-top: 2px solid $border-color; 
+
+    @include desktop {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+        }
+    }
+
+    article{
+
+        @include desktop {
+            position: relative;
+        }
+
+        .button{            
+            padding: 15px 40px;
+            border-radius: 5px;
+            background-color: $primary-color0;
+            text-decoration: none;
+            font-size: 1rem;
+            color: $text-colorw;
+            font-family: $font-title;
+            font-weight: 600;
+            margin-right: 15px;
+            display: inline-block;
+            transition: .5s ease;
+
+            &.button-secundary{
+                background-color: $secundary-color1;
+            }
+
+            &:hover{
+                background-color: $text-color;
+            }
+
+            @include desktop {
+                transform: translateY(125%);
+            }
+        }
+    }
+    h3{
+        color: $title-color;
+        font-weight: 400;
+        padding: 40px 0 10px;
+    }
+    
+    p{
+        padding: 10px 0 15px;
+        color: $text-color;
+    }
+}

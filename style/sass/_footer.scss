@@ -1,0 +1,41 @@
+/* ============ FOOTER ========================= */
+
+.footer{
+    padding: 6vw;
+    background-color: $secundary-color0;
+    color: lighten($secundary-color0, 20%);
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    @include desktop {
+        .container{
+            max-width: 100%;
+            @include flex ("space-between","");
+
+            & > * {
+              margin: 2em;  
+            }
+        }
+    }
+    
+    p{
+        padding: 20px 0;
+    }
+    
+    .links{
+        padding: 20px 0;
+        li{
+            list-style: none;
+            line-height: 30px;
+
+            a{
+                text-decoration: none;
+                color: lighten($secundary-color0, 20%);
+                
+            }
+        }
+    }
+
+}
