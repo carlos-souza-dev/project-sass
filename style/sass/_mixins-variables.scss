@@ -11,10 +11,10 @@ $secundary-color1: #455357;
 $secundary-color0: #242a2c;
 $background-color: #f8f9f9;
 
-@mixin flex{
+@mixin flex ($just,$aline) {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: #{$just};
+    align-items: #{$aline};
 }
 
 @mixin textCenter {

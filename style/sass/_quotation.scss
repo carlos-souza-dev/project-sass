@@ -7,7 +7,7 @@
 .quotation{
     background-color: $primary-color1;
     padding: 50px 6vw;
-    border-bottom: 12px solid $primary-color1 - 20;
+    border-bottom: 12px solid darken($color: $primary-color1, $amount: 20);
 
     .slide-show{
 

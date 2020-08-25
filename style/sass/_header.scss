@@ -1,9 +1,35 @@
 /* ============ HEADER ========================= */
 
+$desktop: 1024px;
+$mobile: 768px;
+
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media screen and (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@include desktop {
+    body {
+        margin-top: 84px;
+    }
+}
+
 .header {
     position: relative;
     width: 100%;
-    @include flex;
+    @include flex("space-between", "center");
+
+    @include desktop {
+        position: fixed;
+        top: 0;
+    }
 
     .header-top {
         z-index: 1;
@@ -13,10 +39,13 @@
         display: flex;
         justify-content: space-between;
 
+        @include desktop {
+            width: 30%;
+        }
+
         .menu-logo{
             display: block;
-            width: 50%;
-            max-width: 300px;
+            width: 30%;
             min-height: 84px;
             line-height: min(84px);
             text-align: center;
@@ -27,9 +56,13 @@
             font-family: $font-title;
             text-decoration: none;
             text-transform: uppercase;
+
+            @include desktop {
+                width: 100%;
+            }
         }
 
-        label {
+        .header-label {
             width: 42px;
             min-height: 42px;
             margin-right: 20px;
@@ -37,6 +70,10 @@
             @include spaceVertical;
             transform: rotate(0deg);
             transition: all 1s ease-in-out;
+
+            @include desktop {
+                display: none;                
+            }
     
             .hamburger-close {
                 position: relative;
@@ -117,10 +154,18 @@
         top: 84px;
         left: 0;
         transition: all .5s ease-in-out;
+        
+        @include desktop {
+            z-index: 1;
+            width: 80%;
+            height: 84px;
+            position: relative;
+            top: 0px;
+        }
+        
 
         ul{
             transition: all .2s ease-in-out;
-            
             
             li{
                 text-align: center;
@@ -131,8 +176,8 @@
 
                 a {
                     width: 100%;
-                    height: 74px;
-                    line-height: 74px;
+                    height: 84px;
+                    line-height: 84px;
                     padding: 0 10px;
                     text-decoration: none;
                     text-transform: uppercase;
@@ -142,39 +187,44 @@
                     display: inline-block;
                     background-color: $secundary-color0;
                     border-bottom: 2px solid rgb(82, 82, 82);
+
+                    @include desktop {
+                        color: lighten($secundary-color0, 25%);
+                        background-color: $background-color;
+                        border: none;
+                        font-size: .9rem;
+
+                        &:hover{
+                            color: $primary-color0;
+                            transition: all .5s ease-in-out;
+                        }
+                    }
                 }
+
+                @include desktop {
+                    display: inline-block;    
+                }
+
+            }
+
+            @include desktop{
+                background-color: $background-color;
+                @include flex ("space-evenly","center");
             }
         }
         
         &.hide-menu{
             transform: translateY(-100%);
             transition: all .5s ease-in-out;
+
+            @include desktop{
+                transform: translateY(0);
+            }
         }
+
     }
 
     .btnMenu{
         display: none;
     }
 }
-
-
-// <header class="header">
-//     <a class="menu-logo" href="index.html">INFUSION</a> 
-//     <label for="button">
-//         <div class="hamburger1"></div>
-//         <div class="hamburger2"></div>
-//         <div class="hamburger3"></div>
-//     </labe>
-//     <button id="button" class="btnMenu">Menu</button>
-
-//     <nav class="nav">
-//         <ul>
-//             <li><a href="#">design folio</a></li>
-//             <li><a href="#">services</a></li>
-//             <li><a href="#">our business</a></li>
-//             <li><a href="#">how we help</a></li>
-//             <li><a href="#">take the tour</a></li>
-//             <li><a href="#">contact</a></li>
-//         </ul>
-//     </nav>
-// </header>
