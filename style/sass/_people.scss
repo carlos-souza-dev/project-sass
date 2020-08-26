@@ -4,14 +4,25 @@
 .people-section{
     width: 100%;
     margin-top: 2.5rem;
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
     
     .people-cards{
-        
+
         .people-about{
             text-align: center;
             padding: 64px 25px 20px;
             border-left: 2px solid $border-color;
-
+            
+            @include desktop {
+                border: 2px solid $border-color;
+                border-bottom: none;
+            }
+            
             .title{
                 color: $title-color;
                 font-size: 1.5rem;
@@ -49,17 +60,3 @@
         }
     }        
 }
-
-
-// <article class="people-cards">               
-
-//     <img class="avatar" src="img/c01.jpg" alt="Carousel Img">
-    
-//     <div class="people-background">
-//     <img src="img/teamsprite_01.png" alt="Carousel Img">
-//     </div>
-//     <div class="people-about">
-//     <h2 class="title">Lorem ipsum dolor sit amet consectetur</h2>
-//     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
-//     </div>
-// </article> 

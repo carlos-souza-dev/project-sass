@@ -17,7 +17,8 @@ body {
 }
 
 .container {
-  margin: 0 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* ============ HEADER ========================= */
@@ -27,11 +28,13 @@ body {
   }
 }
 .header {
+  z-index: 1;
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 4px solid #839499;
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -40,7 +43,6 @@ body {
   }
 }
 .header .header-top {
-  z-index: 1;
   width: 100%;
   height: 84px;
   background-color: #ffff;
@@ -90,26 +92,29 @@ body {
 .header .header-top .header-label .hamburger-close {
   position: relative;
   width: 100%;
-  height: 4px;
+  height: 5px;
+  border-radius: 10px;
   background-color: #242a2c;
   transition: all .8s ease-in-out;
   transform: rotate(0deg);
 }
 .header .header-top .header-label .hamburger-close::before {
   width: 100%;
-  height: 4px;
+  height: 5px;
   content: '';
   position: absolute;
   top: -12px;
+  border-radius: 10px;
   background-color: #242a2c;
   transform: rotate(0deg);
   transition: all .5s ease-in-out;
 }
 .header .header-top .header-label .hamburger-close::after {
   width: 80%;
-  height: 4px;
+  height: 5px;
   content: '';
   position: absolute;
+  border-radius: 10px;
   top: 12px;
   left: 0;
   background-color: #242a2c;
@@ -119,7 +124,8 @@ body {
 .header .header-top .header-label .hamburger-open {
   position: relative;
   width: 100%;
-  height: 4px;
+  height: 5px;
+  border-radius: 10px;
   background-color: transparent;
   transition: all .5s ease-in-out;
   transform: rotate(180deg);
@@ -127,7 +133,8 @@ body {
 .header .header-top .header-label .hamburger-open::before {
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: 5px;
+  border-radius: 10px;
   content: '';
   top: 0px;
   background-color: #242a2c;
@@ -136,11 +143,12 @@ body {
 }
 .header .header-top .header-label .hamburger-open::after {
   width: 100%;
-  height: 4px;
+  height: 5px;
   content: '';
   position: absolute;
   top: 0px;
   left: 0;
+  border-radius: 10px;
   background-color: #242a2c;
   transform: rotate(45deg);
   transition: all .5s ease-in-out;
@@ -150,6 +158,7 @@ body {
   transition: all 1s ease-in-out;
 }
 .header .nav {
+  z-index: -1;
   width: 100%;
   position: absolute;
   top: 84px;
@@ -158,7 +167,6 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .header .nav {
-    z-index: 1;
     width: 80%;
     height: 84px;
     position: relative;
@@ -170,6 +178,11 @@ body {
 }
 .header .nav ul li {
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .header .nav ul li {
+    width: 100%;
+  }
 }
 .header .nav ul li:last-child {
   border-bottom: none;
@@ -281,10 +294,23 @@ body {
   width: 100%;
   margin-top: 2.5rem;
 }
+@media screen and (min-width: 1024px) {
+  .people-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+}
 .people-section .people-cards .people-about {
   text-align: center;
   padding: 64px 25px 20px;
   border-left: 2px solid #dbe1e7;
+}
+@media screen and (min-width: 1024px) {
+  .people-section .people-cards .people-about {
+    border: 2px solid #dbe1e7;
+    border-bottom: none;
+  }
 }
 .people-section .people-cards .people-about .title {
   color: #737c85;
@@ -321,6 +347,12 @@ body {
   padding: 20px 0 80px;
   border-top: 2px solid #dbe1e7;
 }
+@media screen and (min-width: 1024px) {
+  .content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .content article .button {
   padding: 15px 40px;
   border-radius: 5px;
@@ -339,6 +371,11 @@ body {
 }
 .content article .button:hover {
   background-color: #929da5;
+}
+@media screen and (min-width: 1024px) {
+  .content article .button {
+    transform: translateY(50%);
+  }
 }
 .content h3 {
   color: #737c85;
@@ -366,6 +403,11 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: auto;
   grid-gap: 0;
+}
+@media screen and (min-width: 1024px) {
+  .last-section .thumbs {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 .last-section .thumbs a img {
   display: block;
@@ -416,7 +458,19 @@ body {
 .footer {
   padding: 6vw;
   background-color: #242a2c;
-  color: #42484a;
+  color: #526064;
+}
+.footer h2 {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    display: flex;
+    justify-content: space-betwee;
+  }
+  .footer .container > * {
+    padding: 30px;
+  }
 }
 .footer p {
   padding: 20px 0;
@@ -429,7 +483,7 @@ body {
 }
 .footer .links li a {
   text-decoration: none;
-  color: #42484a;
+  color: #526064;
 }
 
 /*# sourceMappingURL=main.css.map */
