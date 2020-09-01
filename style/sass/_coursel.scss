@@ -1,5 +1,51 @@
 /* ============ COURSEL ========================= */
 
+.js .slider{
+    overflow: hidden;
+    
+    .coursel {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        color: white;
+        display: flex;
+        max-width: 950px;
+
+        figure{
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s opacity;
+            
+            &.show{         
+                opacity: 1;
+                position: static;
+            }
+        }        
+
+        .prev, .next{
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+        }
+
+        .prev{
+            left: 10px;
+        }
+
+        .next {
+            right: -20px;
+        }
+    }
+}
+
+
+    
+
+
 .slider{
     background-color: darken($color: $secundary-color1, $amount: 15%);
     padding: 125px 0 100px;

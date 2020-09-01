@@ -9,4 +9,18 @@
         toggleBtn: '.btnMenu',
         widthEnabled: 1024 
     })
+
+    var courselImgs = new Coursel({
+        container: '.slider .coursel',
+        itens: 'figure',
+        btnPrev: '.prev',
+        btnNext: '.next'
+    })
+
+    var courselDepoiments = new Coursel({
+        container: '.slide-show',
+        itens: 'figure',
+        btnPrev: '.prev',
+        btnNext: '.next'
+    })
 })()

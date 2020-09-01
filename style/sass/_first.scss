@@ -2,6 +2,7 @@
 /* ============ FIRST SECTION ========================= */
 
 .first-section{
+    margin-top: 70px;
     height: 80vh;
     padding: 40px 20px;
     text-align: center;
@@ -11,7 +12,7 @@
     align-items: center;
     background: linear-gradient(45deg, white 50%, transparent 50%) left calc(50% + 20px) bottom no-repeat,
                 linear-gradient(-45deg, white 50%, transparent 50%) left calc(50% - 20px) bottom no-repeat,
-     url('/img/01.jpg');
+    url('/img/01.jpg');
     background-size: 40px 40px, 40px 40px, cover;
 
     h1{
@@ -23,6 +24,7 @@
         background-color: $primary-color1;
         color: $text-colorw;
     }
+
     p{
         padding: 24px;
         background-color: $secundary-color0;
@@ -30,6 +32,7 @@
         font-size: 1rem;
         margin: 1vh 3vh 4vh;
     }
+
     .btn-buy{
         display: block;
         background-color: rgba($color: ($secundary-color0), $alpha: .4);
