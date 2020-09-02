@@ -1,10 +1,18 @@
 /* ============ COURSEL ========================= */
 
+.no-js .slider .coursel {
+    .prev, .next {
+        display: none;
+    }
+}
+
+
 .slider{
     background-color: darken($color: $secundary-color1, $amount: 15%);
     padding: 125px 0 100px;
     width: 100%;
     overflow: auto;
+
     .coursel{
         white-space: nowrap;
         
@@ -15,6 +23,48 @@
 
         img{
             width: 100%;
+        }
+    }
+}
+
+.js .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    
+    .coursel{
+        width: 100%;
+        color: white;
+        display: flex;
+        max-width: 950px;
+    
+        figure {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 75%;
+            opacity: 0;
+            transition: 1s opacity;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
+        .prev, .next{
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 30px;
+        }
+
+        .next {
+            right: 30px;
         }
     }
 }

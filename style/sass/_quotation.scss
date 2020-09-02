@@ -1,7 +1,15 @@
 /* ============ COURSEL ========================= */
 
-.no-js .slide-show figure + figure {
-    margin-top: 4rem;
+.no-js .slide-show {
+
+    .prev, .next{
+        display: none;
+    }
+
+    figure + figure {
+        margin-top: 4rem;
+    }
+
 }
 
 .quotation{
@@ -22,6 +30,36 @@
         figcaption{
             color: $text-colorw;
             text-align: center;
+        }
+    }
+}
+
+.js .quotation {
+    position: relative;
+    .slide-show {
+
+        figure {
+            margin: 0;
+        }
+
+        .show {
+            display: none;
+        }
+
+        .prev, .next{
+            color: $secundary-color0;
+            position: absolute;
+            display: block;
+            top: 50%;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
         }
     }
 }

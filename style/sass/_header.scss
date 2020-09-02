@@ -1,29 +1,9 @@
 /* ============ HEADER ========================= */
 
-$desktop: 1024px;
-$mobile: 768px;
-
-@mixin desktop {
-    @media screen and (min-width: #{$desktop}) {
-        @content;
-    }
-}
-
-@mixin ipad {
-    @media screen and (min-width: #{$mobile}) {
-        @content;
-    }
-}
-
-@include desktop {
-    body {
-        margin-top: 84px;
-    }
-}
-
 .header {
     z-index:1;
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
     @include flex("space-between", "center");
     border-bottom: 4px solid lighten($secundary-color0, 40px);
@@ -36,7 +16,7 @@ $mobile: 768px;
 
     .header-top {
         width: 100%;
-        height: 84px;
+        height: 64px;
         background-color: #ffff;
         display: flex;
         justify-content: space-between;
@@ -48,9 +28,10 @@ $mobile: 768px;
         .menu-logo{
             display: block;
             width: 30%;
-            min-height: 84px;
-            line-height: min(84px);
-            text-align: center;
+            min-height: 64px;
+            padding: 0 20px;
+            line-height: min(64px);
+            text-align: right;
             background-color: $primary-color0;
             color: $text-colorw;
             font-weight: 700;
@@ -159,21 +140,22 @@ $mobile: 768px;
     .nav{
         z-index: -1;
         width: 100%;
+        height: calc(68px * 6);
         position: absolute;
-        top: 84px;
+        top: 64px;
         left: 0;
         transition: all .5s ease-in-out;
+        overflow: hidden;
         
         @include desktop {
             width: 80%;
-            height: 84px;
+            height: 64px;
             position: relative;
             top: 0px;
         }
         
 
         ul{
-            transition: all .2s ease-in-out;
             
             li{
                 text-align: center;
@@ -185,27 +167,31 @@ $mobile: 768px;
                 &:last-child{
                     border-bottom: none;
                 }
-
+                
                 a {
                     width: 100%;
-                    height: 84px;
-                    line-height: 84px;
-                    padding: 0 10px;
+                    padding: 20px 10px;
                     text-decoration: none;
                     text-transform: uppercase;
                     font-family: $font-text;
-                    color: $primary-color1;
+                    color: lighten($secundary-color0, 30%);
                     font-weight: 600;
                     display: inline-block;
                     background-color: $secundary-color0;
                     border-bottom: 2px solid rgb(82, 82, 82);
                     
 
+                    &:hover{
+                        color: $primary-color0;
+                        transition: all .5s ease-in-out;
+                    }
+
                     @include desktop {
                         color: lighten($secundary-color0, 25%);
                         background-color: $background-color;
                         border: none;
-                        font-size: .9rem;
+                        font-size: .8rem;
+                        padding: 22px 5px;
 
                         &:hover{
                             color: $primary-color0;
@@ -227,10 +213,11 @@ $mobile: 768px;
         }
         
         &.hide-menu{
-            transform: translateY(-100%);
+            height: 0;
             transition: all .5s ease-in-out;
 
             @include desktop{
+                height: auto;
                 transform: translateY(0);
             }
         }
