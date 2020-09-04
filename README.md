@@ -1,7 +1,7 @@
-# :computer: Projeto: Web Design - Sass
+# :computer: Projeto: Web Design - Sass (Landing page)
 
- - Desenvolver uma página web utilizando HTML, CSS, Javascript e preprocessador Sass
-
+ - Página web utilizando HTML, CSS, Javascript e preprocessador Sass
+    
 
 ### Objetivo
 
