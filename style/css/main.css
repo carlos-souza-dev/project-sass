@@ -463,44 +463,42 @@ body {
   margin: 0 15px;
   display: inline-block;
 }
-.slider .coursel img {
-  width: 100%;
-}
 
 .js .slider {
-  position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 800px;
+  color: white;
 }
 .js .slider .coursel {
+  position: relative;
   width: 100%;
-  color: white;
-  display: flex;
+  margin: auto;
   max-width: 950px;
 }
 .js .slider .coursel figure {
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
-  width: 75%;
+  margin-left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
-  transition: 1s opacity;
 }
 .js .slider .coursel figure.show {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: static;
   opacity: 1;
 }
 .js .slider .coursel .prev, .js .slider .coursel .next {
+  z-index: 3;
   position: absolute;
   top: 50%;
   cursor: pointer;
 }
 .js .slider .coursel .prev {
-  left: 30px;
+  left: -20px;
 }
 .js .slider .coursel .next {
-  right: 30px;
+  right: -20px;
 }
 
 /* ============ COURSEL ========================= */

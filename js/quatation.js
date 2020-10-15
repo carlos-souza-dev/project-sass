@@ -5,9 +5,7 @@
     
         figure[0].classList.add('show');
         var counter = 0;
-        
-        console.log(figure);
-        
+                
         prev.addEventListener('click', function(){
             
                 if(counter == 0){

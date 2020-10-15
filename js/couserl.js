@@ -18,8 +18,6 @@ var next = document.querySelector(".coursel .next")
                 counter--;
                 figure[counter].classList.add('show');
             }
-        
-        console.log("prev",counter);
     })
 
     next.addEventListener('click', function(){
@@ -33,8 +31,6 @@ var next = document.querySelector(".coursel .next")
             counter = 0;
             figure[counter].classList.add('show');
         }
-
-        console.log("next",counter);
     })
     
 })()
