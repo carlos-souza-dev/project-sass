@@ -25,4 +25,4 @@ Este projeto foi desenvolvido para aplicar todo o aprendizado adquirido nos curs
 Link - https://projectweb-plyqnj9ex.vercel.app/
 
 
-![Imagém da página desktop](https://github.com/carlos-souza-dev/project-sass/blob/master/img/prototipo/Desktop.jpg)
+![Imagém da página desktop](https://github.com/carlos-souza-dev/project-sass/blob/master/img/prototipo/Desktop.png)
