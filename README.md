@@ -10,15 +10,15 @@
 > HTML
 > CSS 
 >> SASS
->>> @mixins / @include
->>> %placeholders
->>> @function
->>> @extend
->>> variáveis
+>>> @mixins / @include   
+>>> %placeholders  
+>>> @function      
+>>> @extend    
+>>> variáveis    
 > JavaScript
->> Funções
->> DOM
+>> Funções   
+>> DOM   
 >> BOM
 
 
-![Imagém da página desktop](https://github.com/carlos-souza-dev/project-sass/blob/master/img/prototipo/Desktop.jpg)
+![Imagém da página desktop](https://github.com/carlos-souza-dev/project-sass/blob/master/img/prototipo/Desktop.png)
